@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('Clone GitHub Repo') {
             steps {
-                git branch: 'main', credentialsId: 'github-https', url: 'https://github.com/your-username/Pipelining_pythonApp.git'
+                git branch: 'main', credentialsId: 'github-https', url: 'https://github.com/navyareddy0178/Pipelining_pythonApp.git'
             }
         }
 
         stage('Set Up Python Virtual Environment') {
             steps {
-                bat '"C:\\Users\\your-username\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" -m venv venv'
+                bat '"C:\\Users\\navyareddy0178\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" -m venv venv'
                 bat '.\\venv\\Scripts\\python.exe -m pip install --upgrade pip'
                 bat '.\\venv\\Scripts\\pip install -r requirements.txt'
             }
